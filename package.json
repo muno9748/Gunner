@@ -1,0 +1,18 @@
+{
+  "name": "gunner",
+  "version": "1.0.0",
+  "description": "Gunner",
+  "main": "app.ts",
+  "dependencies": {
+    "express": "^4.17.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "ts-node ./app.ts 80",
+    "start": "ts-node ./app.ts 80",
+    "public": "ts-node ./app.ts 81"
+  },
+  "author": "muno9748",
+  "license": "ISC"
+}

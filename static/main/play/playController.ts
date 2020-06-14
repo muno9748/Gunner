@@ -7,7 +7,6 @@ const generateID = () => Math.random().toString(36).substr(2,8);
 const startGame = async () => {
     const stage = new createjs.Stage("GameDisplay");
     const controller = new MainController(stage);
-    controller.ready?.();
     createjs.Ticker.setFPS(144);
     createjs.Ticker.addEventListener("tick", () => {
         stage.update();
@@ -23,6 +22,8 @@ const startGame = async () => {
         (document.querySelector('#GameDisplay') as HTMLCanvasElement).height = window.innerHeight;
         controller.onResize?.();
     });;
+    controller.ready?.();
+    controller.onResize?.();
 };
 document.querySelector('.play')?.addEventListener('click', async (e: Event) => {
     const animate = (element: Element | HTMLElement, keyframes: any[], options: any) => {
